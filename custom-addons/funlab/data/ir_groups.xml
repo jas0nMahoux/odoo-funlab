@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_appointment_user" model="res.groups">
+        <field name="name">Appointment User</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

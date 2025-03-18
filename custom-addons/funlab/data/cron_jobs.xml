@@ -1,9 +1,9 @@
 <odoo>
-    <record id="cron_fetch_appointments" model="ir.cron">
-        <field name="name">Fetch Appointments</field>
-        <field name="model_id" ref="model_appointment"/>
+    <record id="cron_fetch_session" model="ir.cron">
+        <field name="name">Fetch Session</field>
+        <field name="model_id" ref="model_session"/>
         <field name="state">code</field>
-        <field name="code">model.fetch_appointments()</field>
+        <field name="code">model.fetch_session()</field>
         <field name="interval_number">1</field>
         <field name="interval_type">hours</field>
         <field name="numbercall">-1</field>

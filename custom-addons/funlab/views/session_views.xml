@@ -1,7 +1,7 @@
 <odoo>
-<record id="view_appointment_tree" model="ir.ui.view">
-    <field name="name">appointment.tree</field>
-    <field name="model">appointment</field>
+<record id="view_session_tree" model="ir.ui.view">
+    <field name="name">session.tree</field>
+    <field name="model">session</field>
     <field name="arch" type="xml">
         <tree>
             <field name="name"/>
@@ -12,9 +12,9 @@
     </field>
 </record>
 
-<record id="view_appointment_kanban" model="ir.ui.view">
-    <field name="name">appointment.kanban</field>
-    <field name="model">appointment</field>
+<record id="view_session_kanban" model="ir.ui.view">
+    <field name="name">session.kanban</field>
+    <field name="model">session</field>
     <field name="arch" type="xml">
         <kanban>
             <field name="name"/>
@@ -35,12 +35,12 @@
     </field>
 </record>
 
-<record id="action_appointment" model="ir.actions.act_window">
-    <field name="name">Appointments</field>
-    <field name="res_model">appointment</field>
+<record id="action_session" model="ir.actions.act_window">
+    <field name="name">Session</field>
+    <field name="res_model">session</field>
     <field name="view_mode">tree,kanban</field>
 </record>
 
-<menuitem id="menu_appointment_root" name="Appointments" sequence="10"/>
-<menuitem id="menu_appointment" parent="menu_appointment_root" action="action_appointment" name="Liste des RDV"/>
+<menuitem id="menu_session_root" name="Sessions" sequence="10"/>
+<menuitem id="menu_session" parent="menu_session_root" action="action_session" name="Liste des RDV"/>
 </odoo>

@@ -1,13 +1,13 @@
 {
-    'name': 'Appointment Manager',
+    'name': 'Session Manager',
     'version': '1.0',
-    'summary': 'Gère les rendez-vous externes',
+    'summary': 'Gère les sessions de musi-quizz',
     'category': 'Tools',
-    'author': 'Votre Nom',
+    'author': 'Jason MAHOUX',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/appointment_views.xml',
+        'views/session_views.xml',
         'data/cron_jobs.xml'
     ],
     'installable': True,

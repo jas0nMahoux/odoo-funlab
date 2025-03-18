@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from datetime import datetime
 import requests
 
 class Session(models.Model):
@@ -14,7 +15,7 @@ class Session(models.Model):
     @api.model
     def fetch_session(self):
         try:
-                data = [ # TODO voir pourquoi ca créé pas les données en base
+                data = [ # Mock Data
                     {
                         "id": 1,
                         "squadName": "Alpha Squad",
@@ -91,8 +92,8 @@ class Session(models.Model):
                     self.create({
                         'name': item['bookingName'],
                         'squad_name': item['squadName'],
-                        'begin_date': item['beginDate'],
-                        'end_date': item['endDate'],
+                        'begin_date': datetime.strptime(item['beginDate'], "%Y-%m-%dT%H:%M:%S"),
+                        'end_date': datetime.strptime(item['endDate'], "%Y-%m-%dT%H:%M:%S"),
                         'displayed': True
                     })
         except Exception as e:

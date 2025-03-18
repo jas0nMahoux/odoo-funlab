@@ -9,6 +9,7 @@ class Session(models.Model):
     squad_name = fields.Char(string="Équipe")
     begin_date = fields.Datetime(string="Début")
     end_date = fields.Datetime(string="Fin")
+    displayed = fields.Boolean(string="Affiché", default=True)
 
     @api.model
     def fetch_session(self):
@@ -92,6 +93,7 @@ class Session(models.Model):
                         'squad_name': item['squadName'],
                         'begin_date': item['beginDate'],
                         'end_date': item['endDate'],
+                        'displayed': True
                     })
         except Exception as e:
             raise Exception(f"Erreur de connexion : {str(e)}")

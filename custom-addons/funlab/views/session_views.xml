@@ -8,6 +8,7 @@
             <field name="squad_name"/>
             <field name="begin_date"/>
             <field name="end_date"/>
+            <field name="displayed"/>
         </tree>
     </field>
 </record>
@@ -21,6 +22,7 @@
             <field name="squad_name"/>
             <field name="begin_date"/>
             <field name="end_date"/>
+            <field name="displayed"/>
             <templates>
                 <t t-name="kanban-box">
                     <div class="oe_kanban_details">
@@ -28,6 +30,7 @@
                         <p><t t-esc="record.squad_name.value"/></p>
                         <p><t t-esc="record.begin_date.value"/></p>
                         <p><t t-esc="record.end_date.value"/></p>
+                        <p><t t-esc="record.displayed.value"/></p>
                     </div>
                 </t>
             </templates>
